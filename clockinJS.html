@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        This is time and date lesson in JavaScript
+
+    </div>
+    <div>
+        PST is <span id="time"></span>
+    </div>
+
+    <script>
+        function displayTime(){
+            let now = new Date();
+            console.log(now);
+        }
+        displayTime();
+
+
+        let newDate= new Date(2022, 4, 5, 10, 55, 19);
+        console.log(newDate);
+        let dt = newDate.getFullYear();
+        console.log(dt);
+
+        let mt = newDate.getMonth();
+        console.log(mt);
+
+        let d= newDate.getDate();
+        console.log(d);
+
+        let t = newDate.getHours();
+        console.log(t);
+
+        let m = newDate.getMinutes();
+        console.log(m);
+
+        let seconds = newDate.getSeconds();
+        console.log(seconds);
+
+        // in order to change the date in javascript we will make use of the following commands.
+
+        newDate.setDate(15);
+        console.log(newDate);
+
+
+        // to print time and show clock on our website. 
+        
+        setInterval(updateTime, 1000);
+        function updateTime(){
+           time.innerHTML = new Date();
+        }
+    
+
+
+
+    </script>
+</body>
+</html>
